@@ -1,355 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleTablet.css">
-    <script src="https://kit.fontawesome.com/c594b7f805.js" crossorigin="anonymous"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="project2.js"></script>
 
     <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      body {
+        background-color: #3e3f3f;
+      }
 
-        nav ul {
-            list-style-type: none;
-            margin: 4px;
-            display: flex;
-            flex-direction: row;
-            justify-self: start;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            overflow: hidden;
-        }
+      * {
+        color: white;
+      }
 
+      .container {
+        max-width: 600px;
+      }
 
-        nav li a {
-            color: inherit;
-            display: block;
-            text-align: center;
-            padding: 10px 10px;
-            text-decoration: none;
-        }
+      .completed {
+        text-decoration: line-through;
+      }
 
+      .low-priority {
+        color: green;
+      }
 
-        nav li a:hover {
-            background-color: rgba(121, 127, 133, 0.596);
-            color: #000;
-            text-decoration: none;
-            border-radius: 50px;
-        }
+      .medium-priority {
+        color: orange;
+      }
 
-        p {
-            margin: 10px;
-            line-height: 150%;
-        }
-
-        li {
-
-            line-height: 150%;
-        }
+      .high-priority {
+        color: red;
+      }
     </style>
-</head>
 
-<body class="my-profile">
+    <title>Task List</title>
+  </head>
 
-    <header style="background-color:  #9fc9ff;">
-            <h1 class="mb-0 pb-2 pt-4 text-center mx-20">
-
-            Welcome to my Profile!
-        </h1>
-    </header>
-
-  
-    
-        <!--navigation menu-->
-<div class="navigationMenuLarge d-none d-md-block" style="background-color:#9fc9ff; margin-top: -4px;">
-    <nav>
-        <ul class="nav justify-content-center align-items-center d-flex">
-            <li>
-                <a href="#eduscript">Education</a>
-            </li>
-            <li>
-                <a href="#workExperience">Work Experience</a>
-            </li>
-            <li>
-                <a href="#programmingSkills">Programming Skills</a>
-            </li>
-            <li>
-                <a href="#generalInterests">General Interests</a>
-            </li>
-            <li>
-                <a href="#favoriteThings"> Favorite Things </a>
-            </li>
-            <li>
-                <a href="#favoriteWebsite">Favorite Website</a>
-            </li>
-            <li>
-                <a href="#myProjects">My Projects</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<!--Navigation menu for smaller windows-->
-<div class="navigationMenuSmall d-md-none " style="background-color:#9fc9ff; margin-top: -4px;">
-    <header style="text-align: center; font-weight: bold">
-    </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="#education"><i class="fa-solid fa-graduation-cap" title="Education"></i></a>
-            </li>
-            <li>
-                <a href="#workExperience"><i class="fa-solid fa-briefcase" title="Work Experience"></i></a>
-            </li>
-            <li>
-                <a href="#programmingSkills"><i class="fa-solid fa-laptop-code" title="Programming Skills"></i></a>
-            </li>
-            <li>
-                <a href="#generalInterests"><i class="fa-solid fa-face-smile" title="General Interests"></i></a>
-            </li>
-            <li>
-                <a href="#favoriteThings"><i class="fa-solid fa-star" title="Favorite Things"></i></a>
-            </li>
-            <li>
-                <a href="#favoriteWebsite"><i class="fa-solid fa-laptop" title="Favorite Website"></i></a>
-            </li>
-            <li>
-                <a href="#myProjects"><i class="fa-solid fa-list-check" title="My Projects"></i></a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<!--Main Introduction section-->
-<div class="text-center">
-    <img src="IMG_5655 (1).jpg" class="img-fluid mt-4 mb-4" style="max-height: 180px;">
-</div>
-
-<div class="text-center">
-    <h2 class="h4"> My name is
-        <span class="text-primary">Albert Legacki</span>
-    </h2>
-    <h2 class="h4 pb-2">
-        I am a
-        <span class="text-primary">Computer Science</span>
-        major at
-        <span class="text-primary">St. Johns University</span>
-    </h2>
-</div>
-
-
-
-<!--Education section-->
-<div id="Education" class="p-3 m-2">
-    <h1 class="font-weight-bold">
-        Education:
-    </h1>
-
-    <p>
-        I am a student currently studying Computer Science at St. Johns University.
-        I am in my Junior year of college and I am expected to graduate in May of 2025.
-        I am passionate in the career path I chose and I am excited to see
-        where it takes me in the upcoming future.
-    </p>
-
-</div>
-<!--Work experience section-->
-<div id="WorkExperience" class="p-3">
-    <h1 class="font-weight-bold">
-        Work Experience:
-    </h1>
-
-    <ul>
-        <li>
-            Chipotle Mexican Grill - Manager
-        </li>
-
-        <li>
-            NYC Park Department - Lifeguard
-        </li>
-    </ul>
-</div>
-
-<!--Programming skills section-->
-<div id="programmingSkills" class="p-3">
-    <h1 class="font-weight-bold">
-        Programming Skills:
-    </h1>
-
-    <ul class="list-group">
-        <li class="list-group-item">
-            Java - 3 years
-        </li>
-        <li class="list-group-item">
-            Python - 1 year
-        </li>
-        <li class="list-group-item">
-            HTML - 6 months
-        </li>
-        <li class="list-group-item">
-            CSS - 6 year
-        </li>
-        <li class="list-group-item">
-            JavaScript - 6 months
-        </li>
-        <li class="list-group-item">
-            MERN stack (MongoDB, Express, React, Node.js) - 2 months
-        </li>
-        <li class="list-group-item">
-            Git - 3 years
-        </li>
-    </ul>
-
-</div>
-
-    <!--General interests section-->
-    
-    <div id="generalInterests" class="p-3">
-        <h1 class="font-weight-bold">
-            General Interests:
-        </h1>
-    
-        <p>
-            My general interests include:
-        </p>
-        <ul class="list-group">
-            <li class="list-group-item">
-                Hanging out with friends
-            </li>
-            <li class="list-group-item">
-                Cars
-            </li>
-            <li class="list-group-item">
-                Mountain Biking
-            </li>
-            <li class="list-group-item">
-                Coding
-            </li>
-            <li class="list-group-item">
-                Going to the gym
-            </li>
-        </ul>
-    
-    </div>
-    
-    <!--favorite song, film, and TV show section-->
-    
-
-    <div id="favoriteThings" class="p-3">
-        <h1 class="font-weight-bold">
-            My favorite song, film, and TV show:
-        </h1>
-
-        <h3>
-            My favorite song is
-            <span class="text-primary"> "Time of Our Lives" </span>
-            by <br>
-            <span class="text-primary"> Pitbull and Ne-Yo</span>
-        </h3>
-
-        <video width="350" height="240" controls>
-            <source src="favoritesong.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video> <br>
-
-        <h3>
-            My favorite film is
-            <span class="text-primary"> "The Dark Knight" </span>
-        </h3>
-
-        <video width="350" height="240" controls>
-            <source src="favoritefilm.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video> <br>
-
-        <h3>
-            My favorite TV show is
-            <span class="text-primary"> "Breaking Bad" </span>
-        </h3>
-
-        <video width="350" height="240" controls>
-            <source src="favoriteTVshow.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video> <br>
-
-    </div>
-
-        <!-- favorite Website section-->
-                
-        <div id="favoriteWebsite" class="p-3">
-            <h1 class="font-weight-bold">
-                Favorite Website:
-            </h1>
-        
-            <p>
-                My favorite website is <a href="https://www.youtube.com/" target="_blank">Youtube</a>. Youtube is a free video
-                sharing website that makes it easy to watch online videos. <br>
-                You can even create and upload your own videos to share with others.
-            </p>
+  <body>
+    <div class="container mt-5">
+      <h2>Task List</h2>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskTitle">Tasks:</label>
+          <input type="text" class="form-control" id="taskTitle" required />
         </div>
-        
-        <!--my projects in this course section-->
-        
-<div class="m-4" id="myProjects">
-    <h1 class="font-weight-bold">
-        My Projects in this Course: <br>
-        <a href="index.html" style="font-size: 70%;">My Projects</a>
-    </h1>
-
-    <form action="">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Index</th>
-                    <th>Project</th>
-                    <th>Progress</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Project 1 (Profile Page)</td>
-                    <td><input type="text" class="form-control" placeholder="ex: complete/in progress"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Project 2 (TBD)<a href="index.html"></a></td>
-                    <td><input type="text" class="form-control" placeholder="ex: complete/in progress"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Project 3 (TBD)<a href="index.html"></a></td>
-                    <td>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="ex: complete/in progress">
-                                <div class="input-group-append">
-                                    <input type="submit" class="btn btn-primary" value="update">
-                                </div>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+        <div class="form-group">
+          <label for="taskPriority">Task Priority:</label>
+          <select class="form-control" id="taskPriority">
+            <option style="color: black" value="low">Low</option>
+            <option style="color: black" value="medium">Medium</option>
+            <option style="color: black" value="high">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Status:</label>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="taskStatus"
+              id="pending"
+              value="pending"
+              checked
+            />
+            <label class="form-check-label" for="pending">Pending</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="taskStatus"
+              id="completed"
+              value="completed"
+            />
+            <label class="form-check-label" for="completed">Completed</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+      <ul id="taskList" class="list-group mt-3" style="color: black"></ul>
     </div>
-
-</div>
-</body>
-<br>
-<!--final footer-->
-<footer>
-    <br><br><br>
-</footer>
-
+  </body>
 </html>
